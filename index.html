@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>YouTube Title & Description Generator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>YouTube Title & Description Generator</h1>
+    <form id="apiForm">
+      <label>
+        Enter your Gemini API Key:
+        <input type="password" id="apiKey" required placeholder="Paste your Gemini API key here" autocomplete="off" />
+      </label>
+      <button type="submit">Save API Key</button>
+    </form>
+
+    <form id="ytForm" style="display:none;">
+      <label>
+        Paste Video Script or Summary:
+        <textarea id="videoScript" required placeholder="Paste your video script or summary here..."></textarea>
+      </label>
+      <button type="submit">Generate</button>
+    </form>
+
+    <div id="output" style="display:none;">
+      <div>
+        <h2>Catchy Title</h2>
+        <pre id="ytTitle"></pre>
+      </div>
+      <div>
+        <h2>SEO-Optimized Description</h2>
+        <pre id="ytDesc"></pre>
+      </div>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
