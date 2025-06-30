@@ -7,34 +7,47 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="container">
-    <h1>YouTube Title & Description Generator</h1>
-    <form id="apiForm">
+  <div class="main-bg"></div>
+  <div class="container glass-card">
+    <h1>
+      <img src="https://img.icons8.com/color/48/youtube-play.png" alt="YouTube" class="icon" />
+      YouTube Title & Description Generator
+    </h1>
+    <form id="apiForm" class="card">
       <label>
-        Enter your Gemini API Key:
+        <span class="label-text">Enter your Gemini API Key:</span>
         <input type="password" id="apiKey" required placeholder="Paste your Gemini API key here" autocomplete="off" />
       </label>
-      <button type="submit">Save API Key</button>
+      <button type="submit" class="btn">Save API Key</button>
     </form>
 
-    <form id="ytForm" style="display:none;">
+    <form id="ytForm" class="card" style="display:none;">
       <label>
-        Paste Video Script or Summary:
-        <textarea id="videoScript" required placeholder="Paste your video script or summary here..."></textarea>
+        <span class="label-text">Paste Video Script or Summary:</span>
+        <textarea id="videoScript" class="large-textarea" required placeholder="Paste your video script or summary here..."></textarea>
       </label>
-      <button type="submit">Generate</button>
+      <button type="submit" class="btn">Generate</button>
     </form>
 
-    <div id="output" style="display:none;">
-      <div>
-        <h2>Catchy Title</h2>
+    <div id="output" class="output-grid" style="display:none;">
+      <div class="output-card">
+        <h2>
+          <!-- Icon removed as requested -->
+          Catchy Title
+        </h2>
         <pre id="ytTitle"></pre>
       </div>
-      <div>
-        <h2>SEO-Optimized Description</h2>
+      <div class="output-card">
+        <h2>
+          <img src="https://img.icons8.com/fluency/24/paragraph.png" alt="Description" class="icon" />
+          SEO-Optimized Description
+        </h2>
         <pre id="ytDesc"></pre>
       </div>
     </div>
+    <footer>
+      <p>🚀 Powered by <span class="gemini">Gemini AI</span> | <a href="https://github.com/Rohan-2604/youtube-title-description-generator" target="_blank">GitHub</a></p>
+    </footer>
   </div>
   <script src="app.js"></script>
 </body>
